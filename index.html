@@ -1,0 +1,561 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhan Capital - Financial Services Across India</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --secondary-color: #ffc107;
+            --dark-color: #212529;
+            --light-color: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(13, 110, 253, 0.8), rgba(13, 110, 253, 0.9)), url('https://images.unsplash.com/photo-1579621970588-a35d0e7ab9b6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .logo-text {
+            background: linear-gradient(45deg, #0d6efd, #0dcaf0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+        }
+        
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/919023420640" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-3xl font-bold">
+                    <span class="logo-text">Dhan Capital</span>
+                </a>
+                
+                <div class="hidden md:block">
+                    <ul class="flex space-x-8">
+                        <li><a href="#home" class="text-gray-700 hover:text-blue-600">Home</a></li>
+                        <li><a href="#services" class="text-gray-700 hover:text-blue-600">Services</a></li>
+                        <li><a href="#features" class="text-gray-700 hover:text-blue-600">Features</a></li>
+                        <li><a href="#process" class="text-gray-700 hover:text-blue-600">Process</a></li>
+                        <li><a href="#testimonials" class="text-gray-700 hover:text-blue-600">Testimonials</a></li>
+                        <li><a href="#contact" class="text-gray-700 hover:text-blue-600">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-500 hover:text-gray-600 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4">
+                <ul class="flex flex-col space-y-3">
+                    <li><a href="#home" class="block text-gray-700 hover:text-blue-600">Home</a></li>
+                    <li><a href="#services" class="block text-gray-700 hover:text-blue-600">Services</a></li>
+                    <li><a href="#features" class="block text-gray-700 hover:text-blue-600">Features</a></li>
+                    <li><a href="#process" class="block text-gray-700 hover:text-blue-600">Process</a></li>
+                    <li><a href="#testimonials" class="block text-gray-700 hover:text-blue-600">Testimonials</a></li>
+                    <li><a href="#contact" class="block text-gray-700 hover:text-blue-600">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section text-white py-20 md:py-32">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Get Your Loan Approved in <span class="text-yellow-300">24 Hours</span></h1>
+                <p class="text-xl mb-8">Dhan Capital offers quick and hassle-free loan services across India. We provide personal, business, home, and mortgage loans with minimal documentation.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="https://wa.me/919023420640" class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-full font-semibold transition">Contact Us</a>
+                    <a href="#services" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-full font-semibold transition">Our Services</a>
+                </div>
+                
+                <div class="absolute top-4 right-4 md:top-8 md:right-8 bg-white text-blue-600 px-4 py-1 rounded-full text-sm font-bold flex items-center">
+                    <i class="fas fa-map-marker-alt mr-2"></i> Services Available All Across India
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Financial Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We offer a wide range of financial services tailored to meet your specific needs with competitive interest rates and flexible repayment options.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-8 h-full">
+                    <div class="text-blue-600 text-4xl mb-6">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Home Loans</h3>
+                    <p class="text-gray-600 mb-6">Get your dream home with our competitive interest rates and flexible repayment options. Quick approval with minimal documentation.</p>
+                    <div class="bg-blue-600 text-white text-xs rounded-full px-3 py-1 inline-block">Up to ₹5 Crore</div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-8 h-full">
+                    <div class="text-blue-600 text-4xl mb-6">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Business Loans</h3>
+                    <p class="text-gray-600 mb-6">Expand your business with our collateral-free business loans. Quick disbursement and minimal documentation required.</p>
+                    <div class="bg-blue-600 text-white text-xs rounded-full px-3 py-1 inline-block">Up to ₹2 Crore</div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-8 h-full">
+                    <div class="text-blue-600 text-4xl mb-6">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Personal Loans</h3>
+                    <p class="text-gray-600 mb-6">Get instant personal loans for your immediate financial needs. No collateral required with flexible repayment options.</p>
+                    <div class="bg-blue-600 text-white text-xs rounded-full px-3 py-1 inline-block">Up to ₹50 Lakh</div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-8 h-full">
+                    <div class="text-blue-600 text-4xl mb-6">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Vehicle Loans</h3>
+                    <p class="text-gray-600 mb-6">Drive your dream car with our affordable auto loans. Quick approval and competitive interest rates.</p>
+                    <div class="bg-blue-600 text-white text-xs rounded-full px-3 py-1 inline-block">Up to ₹1 Crore</div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-8 h-full">
+                    <div class="text-blue-600 text-4xl mb-6">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Mortgage Loans</h3>
+                    <p class="text-gray-600 mb-6">Get funds against your property with our mortgage loans. Attractive interest rates and flexible tenure options.</p>
+                    <div class="bg-blue-600 text-white text-xs rounded-full px-3 py-1 inline-block">Up to ₹10 Crore</div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-8 h-full">
+                    <div class="text-blue-600 text-4xl mb-6">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Education Loans</h3>
+                    <p class="text-gray-600 mb-6">Invest in your future with our education loans. Covers tuition fees, living expenses, and study materials.</p>
+                    <div class="bg-blue-600 text-white text-xs rounded-full px-3 py-1 inline-block">Up to ₹75 Lakh</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-yellow-400">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="mb-8 md:mb-0">
+                    <h2 class="text-3xl font-bold mb-4">Need Financial Assistance?</h2>
+                    <p class="text-lg">Contact us today and get your loan approved within 24 hours!</p>
+                </div>
+                <a href="https://wa.me/919023420640" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition">
+                    <i class="fab fa-whatsapp mr-2"></i> Contact on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose Dhan Capital?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We offer the best financial solutions with exceptional service and customer satisfaction.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Quick Approval</h3>
+                    <p class="text-gray-600">Get your loan approved within 24 hours with minimal documentation.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Competitive Rates</h3>
+                    <p class="text-gray-600">We offer the most competitive interest rates in the market.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Minimal Documentation</h3>
+                    <p class="text-gray-600">Simple and hassle-free documentation process for quick loan approval.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Pan India Service</h3>
+                    <p class="text-gray-600">Our services are available across all major cities and towns in India.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Simple Process</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Getting a loan from Dhan Capital is quick and easy. Follow these simple steps:</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">1</div>
+                    <h3 class="text-xl font-bold mb-3">Apply Online</h3>
+                    <p class="text-gray-600">Fill out our simple online application form or contact us via WhatsApp.</p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">2</div>
+                    <h3 class="text-xl font-bold mb-3">Document Submission</h3>
+                    <p class="text-gray-600">Submit the required documents for verification and processing.</p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">3</div>
+                    <h3 class="text-xl font-bold mb-3">Loan Approval</h3>
+                    <p class="text-gray-600">Get your loan approved within 24 hours after document verification.</p>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">4</div>
+                    <h3 class="text-xl font-bold mb-3">Disbursement</h3>
+                    <p class="text-gray-600">Receive the loan amount directly in your bank account.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Don't just take our word for it. Here's what our satisfied clients have to say about our services.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-blue-600 font-bold text-xl">R</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Rajesh Kumar</h4>
+                            <p class="text-gray-600 text-sm">Business Owner, Delhi</p>
+                        </div>
+                    </div>
+                    <div class="text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600">"I got my business loan approved within 24 hours. The process was smooth and hassle-free. Highly recommended!"</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-blue-600 font-bold text-xl">P</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Priya Sharma</h4>
+                            <p class="text-gray-600 text-sm">Homeowner, Mumbai</p>
+                        </div>
+                    </div>
+                    <div class="text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600">"Dhan Capital helped me get my home loan at the best interest rate. Their customer service is exceptional!"</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-blue-600 font-bold text-xl">A</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Amit Patel</h4>
+                            <p class="text-gray-600 text-sm">IT Professional, Bangalore</p>
+                        </div>
+                    </div>
+                    <div class="text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-gray-600">"I needed a personal loan urgently and Dhan Capital delivered. The process was quick and the staff was very helpful."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-blue-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Get in Touch</h2>
+                    <p class="text-xl mb-8">Have questions about our services? Contact us today and our team will get back to you as soon as possible.</p>
+                    
+                    <div class="flex items-center mb-6">
+                        <div class="text-2xl mr-4">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg">WhatsApp</h4>
+                            <a href="https://wa.me/919023420640" class="text-white hover:text-yellow-300">+91 9023420640</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center mb-6">
+                        <div class="text-2xl mr-4">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg">Email</h4>
+                            <a href="mailto:info@dhancapital.com" class="text-white hover:text-yellow-300">info@dhancapital.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center">
+                        <div class="text-2xl mr-4">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg">Location</h4>
+                            <p>Services Available All Across India</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white text-gray-800 p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold mb-6 text-center">Quick Contact</h3>
+                    <form>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name</label>
+                            <input class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Your Name">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">Phone Number</label>
+                            <input class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone" type="tel" placeholder="Your Phone Number">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+                            <input class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Your Email">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Message</label>
+                            <textarea class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="message" rows="4" placeholder="Your Message"></textarea>
+                        </div>
+                        
+                        <div class="flex items-center justify-center">
+                            <a href="https://wa.me/919023420640" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full focus:outline-none focus:shadow-outline w-full text-center">
+                                <i class="fab fa-whatsapp mr-2"></i> Send via WhatsApp
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Dhan Capital</h3>
+                    <p class="mb-6">Your trusted financial partner for all your loan needs across India.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-blue-400"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white hover:text-blue-400"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white hover:text-blue-400"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="#features" class="text-gray-400 hover:text-white">Features</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white">Testimonials</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Our Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Home Loans</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Business Loans</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Personal Loans</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Vehicle Loans</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Education Loans</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Contact Us</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fab fa-whatsapp mr-3"></i>
+                            <a href="https://wa.me/919023420640" class="text-gray-400 hover:text-white">+91 9023420640</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <a href="mailto:info@dhancapital.com" class="text-gray-400 hover:text-white">info@dhancapital.com</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3"></i>
+                            <span class="text-gray-400">Services Available All Across India</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Dhan Capital. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const target = document.querySelector(targetId);
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9452e6caa22c414e',t:'MTc0ODE1Mzc2MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
